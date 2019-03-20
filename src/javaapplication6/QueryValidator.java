@@ -107,6 +107,12 @@ public class QueryValidator {
                 eqv[0] = eqv[0].replace("(", "");
                 eqv[1] = eqv[1].replace(")", "");
                 
+                for(int j = 0; j <2 ; j++){
+                    if(eqv[j].contains(".")){
+                        eqv[j] = eqv[j].split("\\.")[1];
+                    }
+                }
+                
                 Boolean isValidA = false;
                 Boolean isValidB = false;
                 for(Table t : tabs){

@@ -83,8 +83,7 @@ public class JavaApplication6 {
         if(!out[0].equals("*")){
             for(String col : out){
                 if(col.contains(".")){
-                    String[] ar = col.split(".");
-                    col = ar[1];
+                    col = col.split("\\.")[1];
                 }
 
                 for(Table t : from){
