@@ -109,6 +109,7 @@ public class JavaApplication6 {
             for(String s : t.outColomn){
                 System.out.print(" "+s+" ,");
             }
+            i++;
             System.out.println(""); 
         }
         

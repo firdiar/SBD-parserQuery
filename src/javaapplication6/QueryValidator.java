@@ -31,7 +31,13 @@ public class QueryValidator {
     }
     
     public static boolean validateStructure(ArrayList<CheckPoint> cp){
+        if(cp.size() <=0){
+            System.out.println("query parser is not ready for this statement");
+            return false;
+        }
+        
         if(!cp.get(0).status.toLowerCase().equals("select")){
+            System.out.println("query parser is not ready for this statement");
             return false;
         }
         if(cp.get(cp.size()-1).status.toLowerCase().equals("join")){
